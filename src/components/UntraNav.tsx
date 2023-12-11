@@ -1,7 +1,7 @@
-"use client"
- 
-import * as React from "react" 
-import { cn } from "@/lib/utils"
+"use client";
+
+import * as React from "react";
+import { cn } from "@/lib/utils";
 // import {  } from "@/components/icons"
 import Theme from "./Theme";
 import {
@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "./ui/button";
+import { LogInIcon, LucideLogIn, LucideLogOut } from "lucide-react";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -57,6 +59,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 const UltraNav = () => {
   return (
+    <>
     <div className=" flex justify-around  p-2">
       <div className="icon flex ">
         <Avatar className="m-2">
@@ -66,68 +69,84 @@ const UltraNav = () => {
         <h2 className="font-bold my-4 hidden sm:flex">WhySumanCode?</h2>
       </div>
       <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    {/* <Icons.logo className="h-6 w-6" /> */}
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <li className="row-span-3">
+                  <NavigationMenuLink asChild>
+                    <a
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      href="/"
+                    >
+                      {/* <Icons.logo className="h-6 w-6" /> */}
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        shadcn/ui
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Beautifully designed components built with Radix UI and
+                        Tailwind CSS.
+                      </p>
+                    </a>
+                  </NavigationMenuLink>
+                </li>
+                <ListItem href="/docs" title="Introduction">
+                  Re-usable components built using Radix UI and Tailwind CSS.
                 </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
-  
-      <Theme />
+                <ListItem href="/docs/installation" title="Installation">
+                  How to install dependencies and structure your app.
+                </ListItem>
+                <ListItem href="/docs/primitives/typography" title="Typography">
+                  Styles for headings, paragraphs, lists...etc
+                </ListItem>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                {components.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    {component.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/docs" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Documentation
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+
+      <div className="flex gap-4">
+        <Button variant="outline">
+            <LogInIcon className="animate-ping" size={13}/>
+            Sign In</Button>
+        <Button variant="default">
+            <LucideLogOut className="animate-accordion-up" size={13}/>
+            Login</Button>
+      </div>
+
+      
     </div>
+    <div>
+           <h2 className="text-3xl text-center font-serif m-2 underline">
+            All About Navigation Bar!
+          </h2>
+    </div>
+    </>
+    
   );
 };
 
@@ -155,6 +174,8 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+    
+  );
+  
+});
+ListItem.displayName = "ListItem";

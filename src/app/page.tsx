@@ -1,4 +1,4 @@
-import UltraNav from "@/components/UntraNav"
+import UltraNav from "@/components/UntraNav";
 
 export default function Home() {
   return (
