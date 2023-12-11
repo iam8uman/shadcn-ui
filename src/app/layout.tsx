@@ -25,6 +25,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <h2 className="text-3xl text-center font-serif m-2 underline">
+            All About Navigation Bar!
+          </h2>
           <Navbar />
           <div>{children}</div>
         </ThemeProvider>
