@@ -2,6 +2,8 @@ import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import img from "../../../public/log.jpg";
+import { Card } from "@/components/ui/card";
+import { CardDemo } from "@/components/Card";
 
 export default function page() {
   return (
@@ -26,6 +28,15 @@ export default function page() {
           <Image src={img} alt="hero" width={500} height={500} />
         </div>
       </div>
+      <div className="flex flex-wrap justify-center gap-7 m-5 p-4">
+        <CardDemo className=" hover:rotate-3 delay-200 duration-100"/>
+        <CardDemo/>
+        <CardDemo/>
+        <CardDemo/>
+        <CardDemo/>
+        <CardDemo/>
+        <CardDemo/>
+        </div>
     </>
   );
 }
