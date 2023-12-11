@@ -1,13 +1,38 @@
-import React from 'react'
-import Theme from './Theme'
-import { Button } from './ui/button'
+import React from "react";
+import Theme from "./Theme";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Navbar = () => {
   return (
-    <div className=' flex justify-around  p-2'>
-      Navbar <Button>iam8uman</Button> <Theme />
+    <div className=" flex justify-around  p-2">
+      <div className="icon flex ">
+        <Avatar className="m-2">
+          <AvatarImage src="https://github.com/iam8uman.png" alt="@iam8uman" />
+          <AvatarFallback>SS</AvatarFallback>
+        </Avatar>
+        <h2 className="font-bold my-4 hidden sm:flex">WhySumanCode?</h2>
+      </div>
+      <div className="flex-row gap-5 hidden sm:flex">
+        <ul className="flex flex-row gap-6 my-4 text-sm">
+          <li className="mx-5"> 
+            <Link href="/">Home</Link>
+          </li>
+          <li className="mx-5">
+            <Link href="/about">About Us</Link>
+          </li>
+          <li className="mx-5">
+            <Link href="/blog/hello-world">Blog Post</Link>
+          </li>
+          <li className="mx-5 hover:font-semibold transition 2s">
+            <Link href="/blog/hello-world">Contact</Link>
+          </li>
+        </ul>
+      </div>{" "}
+      <Theme />
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
