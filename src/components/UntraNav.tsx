@@ -66,12 +66,12 @@ const UltraNav = () => {
           <AvatarImage src="https://github.com/iam8uman.png" alt="@iam8uman" />
           <AvatarFallback>SS</AvatarFallback>
         </Avatar>
-        <h2 className="font-bold my-4 hidden sm:flex">WhySumanCode?</h2>
+        <h2 className="font-bold my-4 hidden shrink sm:flex">WhySumanCode?</h2>
       </div>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+            <NavigationMenuTrigger className>Getting started</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -129,7 +129,7 @@ const UltraNav = () => {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <div className="flex gap-4">
+      <div className="hidden sm:flex gap-4">
         <Button variant="outline">
             <LogInIcon className="animate-ping" size={13}/>
             Sign In</Button>
@@ -141,7 +141,7 @@ const UltraNav = () => {
       
     </div>
     <div>
-           <h2 className="text-3xl text-center font-serif m-2 underline">
+           <h2 className="text-2xl sm:text-3xl text-center font-serif m-2 underline">
             All About Navigation Bar!
           </h2>
     </div>

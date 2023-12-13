@@ -17,16 +17,19 @@ const Navbar = () => {
       <div className="flex-row gap-5 hidden sm:flex">
         <ul className="flex flex-row gap-6 my-4 text-sm">
           <li className="mx-5"> 
-            <Link href="/">Home</Link>
+            <Link href="/">Navbars</Link>
           </li>
           <li className="mx-5">
-            <Link href="/about">About Us</Link>
+            <Link href="/about">About</Link>
           </li>
           <li className="mx-5">
-            <Link href="/blog/hello-world">Blog Post</Link>
+            <Link href="/card">Cards</Link>
+          </li>
+          <li className="mx-5">
+            <Link href="/card">Footer</Link>
           </li>
           <li className="mx-5 hover:font-semibold transition 2s">
-            <Link href="/blog/hello-world">Contact</Link>
+            <Link href="/blog/hello-world">Mobile</Link>
           </li>
         </ul>
       </div>{" "}
