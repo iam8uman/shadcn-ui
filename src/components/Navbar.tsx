@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link href="/card">Footer</Link>
           </li>
           <li className="mx-5 hover:font-semibold transition 2s">
-            <Link href="/blog/hello-world">Mobile</Link>
+            <Link href="/mobile">Mobile</Link>
           </li>
         </ul>
       </div>{" "}

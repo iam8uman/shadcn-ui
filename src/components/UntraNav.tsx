@@ -140,11 +140,6 @@ const UltraNav = () => {
 
       
     </div>
-    <div>
-           <h2 className="text-2xl sm:text-3xl text-center font-serif m-2 underline">
-            All About Navigation Bar!
-          </h2>
-    </div>
     </>
     
   );
