@@ -15,7 +15,7 @@ export default function page() {
             <h1 className=" p-5 mx-10 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl sm:text-2xl md:text-xl">
               Welcome to the Why Suman Code Academy!
             </h1>
-            <p className="text-xl mx-10 p-5 md:text-xs lg:text-lg">
+            <p className="mx-10 p-5 text-sm sm:text-2xl md:text-3xl">
               Learn to code by watching our videos Lorem ipsum dolor, sit amet
               consectetur adipisicing elit. Nesciunt culpa nostrum praesentium
               sit. Laborum voluptatum alias saepe eligendi in dolores molestias
